@@ -1,0 +1,4 @@
+URL:
+  Home_Login: http://localhost:8089/Home/user/login.html
+  Admin_Login: http://localhost:8089/Admin/Admin/login
+  Home: http://localhost:8089/Home/Index/index.html
