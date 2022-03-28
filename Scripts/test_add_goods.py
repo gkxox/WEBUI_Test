@@ -28,13 +28,14 @@ class TestOrder:
     @allure.description("购买流程测试：登录==》挑选商品==》加入购物车==》支付方式（货到付款）==》生成订单")
     def test_01(self):
 
+        time.sleep(2)
         self.home_login_proxy.login_home()
         time.sleep(2)
         self.home_proxy.select_goods(2)
         self.goods_details_proxy.add_goods(option=1, index=1)
         if self.goods_details_proxy.add_success_text:
             assert '添加成功' in self.goods_details_proxy.add_success_text
-            logging.error('商品添加成功')
+            logging.info('商品添加成功')
             self.driver.get_screenshot_as_file(config.base_dir() + '/Screenshot/商品添加成功.png')
         else:
             logging.error('商品添加失败')
