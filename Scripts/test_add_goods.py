@@ -41,7 +41,7 @@ class TestOrder:
             logging.error('商品添加失败')
             self.driver.get_screenshot_as_file(config.base_dir() + '/Screenshot/商品添加失败.png')
 
-        # time.sleep(2)
+        time.sleep(2)
         self.my_cart_page_proxy.checkout_goods(1,0,2)
         time.sleep(2)
         self.driver.get_screenshot_as_file(config.base_dir() + '/Screenshot/结算商品.png')
