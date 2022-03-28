@@ -1,0 +1,41 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "Scripts",
+    "children" : [ {
+      "name" : "test_begin",
+      "children" : [ {
+        "name" : "test_begin",
+        "uid" : "c6e9308422d9782d",
+        "parentUid" : "834112b1110e714adb963bdcc9cd1a80",
+        "status" : "passed",
+        "time" : {
+          "start" : 1648477764590,
+          "stop" : 1648477764590,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "834112b1110e714adb963bdcc9cd1a80"
+    }, {
+      "name" : "test_add_goods",
+      "children" : [ {
+        "name" : "前台下单",
+        "uid" : "af70346235083bbb",
+        "parentUid" : "33f15fa0d3f23944b95fa947c8a32534",
+        "status" : "passed",
+        "time" : {
+          "start" : 1648477767747,
+          "stop" : 1648477823404,
+          "duration" : 55657
+        },
+        "flaky" : true,
+        "parameters" : [ ]
+      } ],
+      "uid" : "33f15fa0d3f23944b95fa947c8a32534"
+    } ],
+    "uid" : "f0c00eb29d1d30bef17ec979370ad3b1"
+  } ]
+}
