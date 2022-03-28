@@ -33,8 +33,6 @@ class BasePage:
         element.clear()
         element.send_keys(text)
 
-
-
 # 操作层基类
 # class BaseHandle:
 #
