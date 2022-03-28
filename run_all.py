@@ -7,3 +7,4 @@ if __name__ == "__main__":
     # 执行命令 allure generate ./temp -o ./report --clean ，生成测试报告
     os.system('allure generate ./Report/report_data -o ./Report/report --clean')
     os.system('powershell.exe  rmdir -r ./Report/report_data/* -Force')
+    
