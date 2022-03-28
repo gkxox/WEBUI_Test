@@ -8,4 +8,3 @@ if __name__ == "__main__":
     os.system('allure generate ./Report/report_data -o ./Report/report --clean')
     os.system('powershell.exe  rmdir -r ./Report/report_data/* -Force')
 
-    
