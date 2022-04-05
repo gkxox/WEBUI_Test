@@ -1,13 +1,13 @@
 from selenium.webdriver.common.by import By
 
-from Base.base import BasePage, BaseHandle
+from Base.base import BasePage
 
 
 # 管理员登录页-对象库存
 class AdminLoginPage(BasePage):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self,broswer):
+        super().__init__(broswer)
         # 管理员登录页面url
         self.admin_login_url = 'http://localhost:8089/Admin/Admin/login'
         # 用户名
@@ -36,10 +36,11 @@ class AdminLoginPage(BasePage):
         self.driver.get(self.admin_login_url)
 
 
-class AdminLoginHandle(BaseHandle):
+class AdminLoginHandle(BasePage):
 
-    def __init__(self):
-        self.admin_login_handle = AdminLoginPage()
+    def __init__(self,broswer):
+        super().__init__(broswer)
+        self.admin_login_handle = AdminLoginPage(broswer)
 
     def input_username(self, username):
         self.input_text(self.admin_login_handle.find_username(), username)
@@ -59,8 +60,8 @@ class AdminLoginHandle(BaseHandle):
 
 class AdminLoginProxy:
 
-    def __init__(self):
-        self.admin_login_proxy = AdminLoginHandle()
+    def __init__(self,broswer):
+        self.admin_login_proxy = AdminLoginHandle(broswer)
 
     def login_admin(self, username='admin', password='123456', verify_code='8888'):
         self.admin_login_proxy.login_admin_page()

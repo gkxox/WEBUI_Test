@@ -18,29 +18,6 @@ from appium import webdriver as app_driver
 from selenium.webdriver.common.by import By
 
 
-class UtilsDriver:
-    _driver = None
-
-    __quit_driver = True  # 系统退出驱动的标识
-
-    # 定义修改私有属性的方法
-    @classmethod
-    def set_quit_driver(cls, mark):
-        cls.__quit_driver = mark
-
-    @classmethod
-    def get_driver(cls):
-        if not cls._driver:
-            cls._driver = webdriver.Chrome()
-            cls._driver.implicitly_wait(5)
-            cls._driver.maximize_window()
-        return cls._driver
-
-    @classmethod
-    def quit_driver(cls):
-        if cls._driver and cls.__quit_driver:
-            cls.get_driver().quit()
-            cls._driver = None
 
 def init_logging():
     # 创建日志器

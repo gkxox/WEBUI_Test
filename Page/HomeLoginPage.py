@@ -10,8 +10,8 @@ from Base.base import BasePage
 # 主页登录-对象库层
 class HomeLoginPage(BasePage):
 
-    def __init__(self):
-        super(HomeLoginPage, self).__init__()
+    def __init__(self,broswer):
+        super(HomeLoginPage, self).__init__(broswer)
         # home登录页面
         self.home_login_url = config.read_config("URL", 'Home_Login')
         # 用户名
@@ -52,9 +52,9 @@ class HomeLoginPage(BasePage):
 # 主页登录-操作层
 class HomePageHandle(BasePage):
 
-    def __init__(self):
-        super().__init__()
-        self.home_login_handle = HomeLoginPage()
+    def __init__(self,broswer):
+        super().__init__(broswer)
+        self.home_login_handle = HomeLoginPage(broswer)
 
     # 打开home登录页面
     @allure.step("打开home登录页面")
@@ -89,8 +89,8 @@ class HomePageHandle(BasePage):
 # 主页登录-业务层
 class HomeLoginProxy:
 
-    def __init__(self):
-        self.home_login_proxy = HomePageHandle()
+    def __init__(self,broswer):
+        self.home_login_proxy = HomePageHandle(broswer)
 
     # 用户登录
     def login_home(self, username='13488888888', password='123456', verify_code='8888'):
@@ -103,4 +103,4 @@ class HomeLoginProxy:
 
 
 if __name__ == "__main__":
-    HomeLoginProxy().login_home()
+    HomeLoginProxy(broswer='chrome').login_home()

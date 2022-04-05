@@ -1,11 +1,11 @@
 {
-  "uid" : "c6e9308422d9782d",
+  "uid" : "b78702ad7109d078",
   "name" : "test_begin",
   "fullName" : "Scripts.test_begin.TestBegin#test_begin",
   "historyId" : "c1cb28d2da72af22fd90636b177976fa",
   "time" : {
-    "start" : 1648477764590,
-    "stop" : 1648477764590,
+    "start" : 1648559086225,
+    "stop" : 1648559086225,
     "duration" : 0
   },
   "status" : "passed",
@@ -13,34 +13,34 @@
   "beforeStages" : [ {
     "name" : "_session_faker",
     "time" : {
-      "start" : 1648477764386,
-      "stop" : 1648477764590,
-      "duration" : 204
+      "start" : 1648559086039,
+      "stop" : 1648559086222,
+      "duration" : 183
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
     "hasContent" : false,
-    "stepsCount" : 0
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
   } ],
   "testStage" : {
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "66083f3c8e7363e9",
+      "uid" : "f6cd6879a10b7cda",
       "name" : "log",
-      "source" : "66083f3c8e7363e9.txt",
+      "source" : "f6cd6879a10b7cda.txt",
       "type" : "text/plain",
       "size" : 4379
     } ],
     "parameters" : [ ],
-    "attachmentsCount" : 1,
-    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
     "hasContent" : true,
-    "stepsCount" : 0
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1
   },
   "afterStages" : [ ],
   "labels" : [ {
@@ -60,7 +60,7 @@
     "value" : "LAPTOP-0BNDKKTD"
   }, {
     "name" : "thread",
-    "value" : "190572-MainThread"
+    "value" : "190108-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -80,18 +80,10 @@
   "retry" : false,
   "extra" : {
     "severity" : "normal",
-    "retries" : [ {
-      "uid" : "1a300f9a6115deff",
-      "status" : "passed",
-      "time" : {
-        "start" : 1648474271283,
-        "stop" : 1648474271283,
-        "duration" : 0
-      }
-    } ],
+    "retries" : [ ],
     "categories" : [ ],
     "tags" : [ "run(order=1000)" ]
   },
-  "source" : "c6e9308422d9782d.json",
+  "source" : "b78702ad7109d078.json",
   "parameterValues" : [ ]
 }

@@ -1,0 +1,4 @@
+2022-03-29 01:01:09,133 ERROR [root] [test_add_goods.py(test_01:37)] - 商品添加成功
+2022-03-29 20:48:06,129 INFO [root] [test_add_goods.py(test_01:38)] - 商品添加成功
+2022-03-29 21:05:03,558 INFO [root] [test_add_goods.py(test_01:38)] - 商品添加成功
+2022-03-29 22:23:19,924 INFO [root] [test_add_goods.py(test_01:38)] - 商品添加成功

@@ -7,8 +7,8 @@ import config
 from Base.base import BasePage
 
 class HomePage(BasePage):
-    def __init__(self):
-        super(HomePage, self).__init__()
+    def __init__(self,broswer):
+        super(HomePage, self).__init__(broswer)
         # home主页
         self.home_url = config.read_config("URL", 'Home')
         # 家用电器元素组
@@ -35,9 +35,9 @@ class HomePage(BasePage):
 
 
 class HomeHandle(BasePage):
-    def __init__(self):
-        super().__init__()
-        self.home_handle = HomePage()
+    def __init__(self,broswer):
+        super().__init__(broswer)
+        self.home_handle = HomePage(broswer)
 
     @allure.step("跳转至主页")
     def login_home_page(self):
@@ -58,8 +58,8 @@ class HomeHandle(BasePage):
 
 class HomeProxy:
 
-    def __init__(self):
-        self.home_proxy = HomeHandle()
+    def __init__(self,broswer):
+        self.home_proxy = HomeHandle(broswer)
 
     def select_goods(self, index):
         self.home_proxy.login_home_page()
@@ -68,4 +68,4 @@ class HomeProxy:
 
 
 if __name__ == '__main__':
-    HomeProxy().select_goods(0)
+    HomeProxy(broswer='chrome').select_goods(0)

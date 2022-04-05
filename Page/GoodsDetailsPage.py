@@ -6,13 +6,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 
-from Base.base import BasePage
-from utils import UtilsDriver
+from Base.base import BasePage,UtilsDriver
+
 
 
 class GoodsDetailsPage(BasePage):
-    def __init__(self):
-        super().__init__()
+    def __init__(self,broswer):
+        super().__init__(broswer)
 
         self.goods_size = By.XPATH, "//span[text()='尺寸：']/../../li[2]/a"
         self.dispatching = By.XPATH, "//*[@id='dispatching_select']"
@@ -71,9 +71,9 @@ class GoodsDetailsPage(BasePage):
 
 
 class GoodsDetailsHandle(BasePage):
-    def __init__(self):
-        super().__init__()
-        self.goods_details_handle = GoodsDetailsPage()
+    def __init__(self,broswer):
+        super().__init__(broswer)
+        self.goods_details_handle = GoodsDetailsPage(broswer)
 
     @allure.step("选择配送地址")
     def select_area(self, area):
@@ -130,8 +130,8 @@ class GoodsDetailsProxy:
 
     add_success_text = None
 
-    def __init__(self):
-        self.goods_details_proxy = GoodsDetailsHandle()
+    def __init__(self,broswer):
+        self.goods_details_proxy = GoodsDetailsHandle(broswer)
 
     def assert_add_success(self):
         self.add_success_text = self.goods_details_proxy.assert_add_success_text()
@@ -175,4 +175,4 @@ class GoodsDetailsProxy:
 
 
 if __name__ == "__main__":
-    GoodsDetailsProxy().add_goods(2, 0)
+    GoodsDetailsProxy(broswer='chrome').add_goods(2, 0)

@@ -1,3 +1,4 @@
 "Status","Name","Duration in ms","Description"
-"passed","Scripts.test_add_goods.TestOrder#test_01","55657","购买流程测试：登录==》挑选商品==》加入购物车==》支付方式（货到付款）==》生成订单"
+"passed","Scripts.test_add_goods.TestOrder#test_01","15886","购买流程测试：登录==》挑选商品==》加入购物车==》支付方式（货到付款）==》生成订单"
+"passed","Scripts.test_end.TestEnd#test_end","2255",""
 "passed","Scripts.test_begin.TestBegin#test_begin","0",""

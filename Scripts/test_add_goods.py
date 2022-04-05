@@ -14,11 +14,12 @@ from Page import HomePage,HomeLoginPage,GoodsDetailsPage,MyCartPage
 class TestOrder:
 
     def setup_class(self):
-        self.home_login_proxy = HomeLoginPage.HomeLoginProxy()
-        self.home_proxy = HomePage.HomeProxy()
-        self.goods_details_proxy = GoodsDetailsPage.GoodsDetailsProxy()
-        self.my_cart_page_proxy = MyCartPage.MyCartProxy()
-        self.driver = UtilsDriver.get_driver()
+        self.broswer = 'chrome'
+        self.home_login_proxy = HomeLoginPage.HomeLoginProxy(self.broswer)
+        self.home_proxy = HomePage.HomeProxy(self.broswer)
+        self.goods_details_proxy = GoodsDetailsPage.GoodsDetailsProxy(self.broswer)
+        self.my_cart_page_proxy = MyCartPage.MyCartProxy(self.broswer)
+        self.driver = UtilsDriver.get_driver(self.broswer)
 
 
     def teardown_class(self):

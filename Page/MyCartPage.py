@@ -6,8 +6,8 @@ import allure
 
 class MyCartPage(BasePage):
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self,broswer):
+        super().__init__(broswer)
 
         # 我的购物车_url
         self.my_cart_url = 'http://localhost:8089/Home/Cart/index.html'
@@ -53,9 +53,9 @@ class MyCartPage(BasePage):
 
 class MyCartHandle(BasePage):
 
-    def __init__(self):
-        super().__init__()
-        self.my_cart_handle = MyCartPage()
+    def __init__(self,broswer):
+        super().__init__(broswer)
+        self.my_cart_handle = MyCartPage(broswer)
 
     @allure.step("跳转至我的购物车")
     def skip_to_my_cart_url(self):
@@ -91,8 +91,8 @@ class MyCartHandle(BasePage):
 
 
 class MyCartProxy:
-    def __init__(self):
-        self.my_cart_proxy = MyCartHandle()
+    def __init__(self,broswer):
+        self.my_cart_proxy = MyCartHandle(broswer)
 
     def checkout_goods(self, checkbox_index, index, num):
         self.my_cart_proxy.click_check_cart_all()

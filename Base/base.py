@@ -1,15 +1,49 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
+#
+# from utils import UtilsDriver
 
-from utils import UtilsDriver
+
+class UtilsDriver:
+    _driver = None
+
+    __quit_driver = True  # 系统退出驱动的标识
+
+    # 定义修改私有属性的方法
+    @classmethod
+    def set_quit_driver(cls, mark):
+        cls.__quit_driver = mark
+
+    @classmethod
+    def get_driver(cls,broswer='chrome'):
+        if not cls._driver:
+            if broswer.lower() == 'chrome':
+                cls._driver = webdriver.Chrome()
+                cls._driver.implicitly_wait(5)
+                cls._driver.maximize_window()
+            elif broswer.lower() == 'firefox':
+                cls._driver = webdriver.Firefox()
+                cls._driver.implicitly_wait(5)
+                cls._driver.maximize_window()
+            else:
+                print("输入正确的浏览器")
+
+        return cls._driver
+
+    @classmethod
+    def quit_driver(cls,broswer='chrome'):
+        if cls._driver and cls.__quit_driver:
+            cls.get_driver(broswer).quit()
+            cls._driver = None
+
 
 
 # 对象库层基类
 class BasePage:
 
-    def __init__(self):
-        self.driver = UtilsDriver.get_driver()
+    def __init__(self,broswer):
+        self.driver = UtilsDriver.get_driver(broswer)
 
     # 定位元素
     def find_element(self, locator):

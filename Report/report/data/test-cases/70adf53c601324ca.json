@@ -1,66 +1,66 @@
 {
-  "uid" : "1a300f9a6115deff",
-  "name" : "test_begin",
-  "fullName" : "Scripts.test_begin.TestBegin#test_begin",
-  "historyId" : "c1cb28d2da72af22fd90636b177976fa",
+  "uid" : "70adf53c601324ca",
+  "name" : "test_end",
+  "fullName" : "Scripts.test_end.TestEnd#test_end",
+  "historyId" : "1e2f829e8d065555614bf72f9dc3f5ed",
   "time" : {
-    "start" : 1648474271283,
-    "stop" : 1648474271283,
-    "duration" : 0
+    "start" : 1648559103788,
+    "stop" : 1648559106043,
+    "duration" : 2255
   },
   "status" : "passed",
   "flaky" : false,
   "beforeStages" : [ {
     "name" : "_session_faker",
     "time" : {
-      "start" : 1648474271095,
-      "stop" : 1648474271283,
-      "duration" : 188
+      "start" : 1648559086039,
+      "stop" : 1648559086222,
+      "duration" : 183
     },
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "attachmentsCount" : 0,
-    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
     "hasContent" : false,
-    "stepsCount" : 0
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
   } ],
   "testStage" : {
     "status" : "passed",
     "steps" : [ ],
     "attachments" : [ {
-      "uid" : "671395aca665c593",
+      "uid" : "cc8feb25286e41d2",
       "name" : "log",
-      "source" : "671395aca665c593.txt",
+      "source" : "cc8feb25286e41d2.txt",
       "type" : "text/plain",
-      "size" : 4379
+      "size" : 390
     } ],
     "parameters" : [ ],
-    "attachmentsCount" : 1,
-    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
     "hasContent" : true,
-    "stepsCount" : 0
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 1
   },
   "afterStages" : [ ],
   "labels" : [ {
     "name" : "tag",
-    "value" : "run(order=1000)"
+    "value" : "run(order=1999)"
   }, {
     "name" : "parentSuite",
     "value" : "Scripts"
   }, {
     "name" : "suite",
-    "value" : "test_begin"
+    "value" : "test_end"
   }, {
     "name" : "subSuite",
-    "value" : "TestBegin"
+    "value" : "TestEnd"
   }, {
     "name" : "host",
     "value" : "LAPTOP-0BNDKKTD"
   }, {
     "name" : "thread",
-    "value" : "108136-MainThread"
+    "value" : "190108-MainThread"
   }, {
     "name" : "framework",
     "value" : "pytest"
@@ -69,19 +69,21 @@
     "value" : "cpython3"
   }, {
     "name" : "package",
-    "value" : "Scripts.test_begin"
+    "value" : "Scripts.test_end"
   }, {
     "name" : "resultFormat",
     "value" : "allure2"
   } ],
   "parameters" : [ ],
   "links" : [ ],
-  "hidden" : true,
-  "retry" : true,
+  "hidden" : false,
+  "retry" : false,
   "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ "run(order=1000)" ]
+    "tags" : [ "run(order=1999)" ]
   },
-  "source" : "1a300f9a6115deff.json",
+  "source" : "70adf53c601324ca.json",
   "parameterValues" : [ ]
 }

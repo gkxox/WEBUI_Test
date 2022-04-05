@@ -7,12 +7,12 @@
       "name" : "test_begin",
       "children" : [ {
         "name" : "test_begin",
-        "uid" : "c6e9308422d9782d",
+        "uid" : "b78702ad7109d078",
         "parentUid" : "834112b1110e714adb963bdcc9cd1a80",
         "status" : "passed",
         "time" : {
-          "start" : 1648477764590,
-          "stop" : 1648477764590,
+          "start" : 1648559086225,
+          "stop" : 1648559086225,
           "duration" : 0
         },
         "flaky" : false,
@@ -23,18 +23,34 @@
       "name" : "test_add_goods",
       "children" : [ {
         "name" : "前台下单",
-        "uid" : "af70346235083bbb",
+        "uid" : "593e452938ef7de5",
         "parentUid" : "33f15fa0d3f23944b95fa947c8a32534",
         "status" : "passed",
         "time" : {
-          "start" : 1648477767747,
-          "stop" : 1648477823404,
-          "duration" : 55657
+          "start" : 1648559087894,
+          "stop" : 1648559103780,
+          "duration" : 15886
         },
-        "flaky" : true,
+        "flaky" : false,
         "parameters" : [ ]
       } ],
       "uid" : "33f15fa0d3f23944b95fa947c8a32534"
+    }, {
+      "name" : "test_end",
+      "children" : [ {
+        "name" : "test_end",
+        "uid" : "70adf53c601324ca",
+        "parentUid" : "48dd96168897a39654813df424364ced",
+        "status" : "passed",
+        "time" : {
+          "start" : 1648559103788,
+          "stop" : 1648559106043,
+          "duration" : 2255
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "48dd96168897a39654813df424364ced"
     } ],
     "uid" : "f0c00eb29d1d30bef17ec979370ad3b1"
   } ]
