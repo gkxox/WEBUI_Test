@@ -93,7 +93,7 @@ class HomeLoginProxy:
         self.home_login_proxy = HomePageHandle(broswer)
 
     # 用户登录
-    def login_home(self, username='13488888888', password='123456', verify_code='8888'):
+    def login_home(self, username, password, verify_code):
         self.home_login_proxy.login_home_page()
         self.home_login_proxy.input_username(username)
         self.home_login_proxy.input_password(password)
@@ -103,4 +103,4 @@ class HomeLoginProxy:
 
 
 if __name__ == "__main__":
-    HomeLoginProxy(broswer='chrome').login_home()
+    HomeLoginProxy(broswer='chrome').login_home(username='13488888888', password='123456', verify_code='8888')

@@ -13,7 +13,7 @@ from Page import HomePage,HomeLoginPage,GoodsDetailsPage,MyCartPage
 class TestOrder:
 
     def setup_class(self):
-        self.broswer = 'firefox'
+        self.broswer = 'chrome'
         self.home_login_proxy = HomeLoginPage.HomeLoginProxy(self.broswer)
         self.home_proxy = HomePage.HomeProxy(self.broswer)
         self.goods_details_proxy = GoodsDetailsPage.GoodsDetailsProxy(self.broswer)
@@ -26,10 +26,11 @@ class TestOrder:
 
     @allure.title("前台下单")
     @allure.description("购买流程测试：登录==》挑选商品==》加入购物车==》支付方式（货到付款）==》生成订单")
-    def test_01(self):
+    @pytest.mark.parametrize(['username','password','verify_code'],[['13488888888','123456','8888']])
+    def test_01(self,username,password,verify_code):
 
         time.sleep(2)
-        self.home_login_proxy.login_home()
+        self.home_login_proxy.login_home(username,password,verify_code)
         time.sleep(2)
         self.home_proxy.select_goods(2)
         self.goods_details_proxy.add_goods(option=1, index=1)
