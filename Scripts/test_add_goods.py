@@ -9,7 +9,6 @@ import config
 from Base.base import UtilsDriver
 from Page import HomePage,HomeLoginPage,GoodsDetailsPage,MyCartPage
 
-
 @pytest.mark.run(order=1001)
 class TestOrder:
 
