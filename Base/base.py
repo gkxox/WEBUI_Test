@@ -1,8 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
-#
-# from utils import UtilsDriver
 
 
 class UtilsDriver:
@@ -19,11 +17,16 @@ class UtilsDriver:
     def get_driver(cls,broswer='chrome'):
         if not cls._driver:
             if broswer.lower() == 'chrome':
-                cls._driver = webdriver.Chrome()
+                chrome_options = webdriver.ChromeOptions()
+                # chrome_options.add_argument('--headless')
+                # chrome_options.add_argument("--window-size=1920x1080")
+                cls._driver = webdriver.Chrome(options=chrome_options)
                 cls._driver.implicitly_wait(5)
                 cls._driver.maximize_window()
             elif broswer.lower() == 'firefox':
-                cls._driver = webdriver.Firefox()
+                options = webdriver.FirefoxOptions()
+                # options.headless = True
+                cls._driver = webdriver.Firefox(firefox_options=options)
                 cls._driver.implicitly_wait(5)
                 cls._driver.maximize_window()
             else:
@@ -32,9 +35,9 @@ class UtilsDriver:
         return cls._driver
 
     @classmethod
-    def quit_driver(cls,broswer='chrome'):
+    def quit_driver(cls):
         if cls._driver and cls.__quit_driver:
-            cls.get_driver(broswer).quit()
+            cls.get_driver().quit()
             cls._driver = None
 
 

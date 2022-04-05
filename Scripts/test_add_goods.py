@@ -14,7 +14,7 @@ from Page import HomePage,HomeLoginPage,GoodsDetailsPage,MyCartPage
 class TestOrder:
 
     def setup_class(self):
-        self.broswer = 'chrome'
+        self.broswer = 'firefox'
         self.home_login_proxy = HomeLoginPage.HomeLoginProxy(self.broswer)
         self.home_proxy = HomePage.HomeProxy(self.broswer)
         self.goods_details_proxy = GoodsDetailsPage.GoodsDetailsProxy(self.broswer)
